@@ -1,0 +1,343 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
+        <title>Zeeshan Hayat Shareef</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/flaticon/flaticon.css' %}">
+        <!-- main css -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu fixed-top" id="mainNav">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620" style="background: #1771fc">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="/"><img src="{% static 'img/d1.gif' %}" alt="" style="width: 50px" height="50px"></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item active"><a class="nav-link" href="/" style="color: white">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="#about_skills" style="color: white">About</a></li>
+								<li class="nav-item"><a class="nav-link" href="#about_skills" style="color: white">Skills</a>
+                                <li class="nav-item"><a class="nav-link" href="#education" style="color: white">Education</a>
+                                <li class="nav-item"><a class="nav-link" href="#experience" style="color: white">Experience</a>
+                                <li class="nav-item"><a class="nav-link" href="#project" style="color: white">Projects</a>
+								<li class="nav-item"><a class="nav-link" href="#contact" style="color: white">Contact</a></li>
+							</ul>
+						</div> 
+					</div>
+            	</nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+        <!--================Home Banner Area =================-->
+        <section class="home_banner_area">
+            <div class="banner_inner">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="home_left_img" align="center">
+                                <br>{% for header in headers %}
+								<img src="/{{ 'media' }}/{{ header.profile_pic }}" alt="" style="width: 60%" height="50%" class="img-fluid img-thumbnail color-2">
+							</div>
+						</div>
+						<div class="col-lg-8">
+							<div class="banner_content">
+								<br/><br/><br/>
+                                <h3 style="color: #1771fc">This is me</h3>
+
+                                <h1 style="color: #1771fc">{{ header.profile_name}}</h1>
+
+                                <h5><p><Span style="color: #1771fc">{{ header.profile_skills}} </Span><span>  &nbsp & &nbsp</span> <span style="color: #1771fc">Artificial Intelligence & Data Science Expert</span></p></h5>
+                                <button class="btn btn-primary btn-lg"  href="#contact"><a href="#contact" style="color: white">Hire Me</a></button> &nbsp &nbsp<button class="btn btn-primary btn-lg"><a href="{%  static 'img\Zeeshan.pdf' %}" style="color: white">Download CV</a></button>
+                                <br><br>
+                                <h6><i class="lnr lnr-phone-handset"></i> &nbsp <a href="#" style="color: #1771fc">{{ header.p_phone}}</a></h6>
+                                <h6><i class="lnr lnr-envelope"></i>&nbsp <a href="#" style="color: #1771fc">{{ header.p_email}}</a></h6>
+                                {% endfor %}
+                            </div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+        
+        <!--================Welcome Area =================-->
+        <section class="welcome_area p_120" id="about_skills">
+        	<div class="container">
+        		<div class="row welcome_inner">
+        			<div class="col-lg-6">
+        				<div class="welcome_text">
+        					<h2 align="center" style="color: #1771fc">About Myself</h2>
+                            {% for about in abouts %}
+                            <p class="justify-content-around" align="justify">{{ about.myself}}</p>
+                            {% endfor %}
+                            <div class="row">
+        						<div class="col-md-4">
+        							<div class="wel_item">
+        								<i class="lnr lnr-database"></i>
+        								<h4>$2.5M</h4>
+        								<p>Total Donation</p>
+        							</div>
+        						</div>
+        						<div class="col-md-4">
+        							<div class="wel_item">
+        								<i class="lnr lnr-book"></i>
+        								<h4>1465</h4>
+        								<p>Total Projects</p>
+        							</div>
+        						</div>
+        						<div class="col-md-4">
+        							<div class="wel_item">
+        								<i class="lnr lnr-users"></i>
+        								<h4>3965</h4>
+        								<p>Total Volunteers</p>
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-6">
+        				<div class="tools_expert">
+        					<h2 align="center" style="color: #1771fc">Skills</h2>
+        					<div class="skill_main">
+								{% for skill in skills %}
+                                <div class="skill_item">
+									<h4>{{ skill.s_name }} <span class="counter">{{ skill.s_percentage }}</span>%</h4>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.s_percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+                                {% endfor %}
+							</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Welcome Area =================-->
+
+    <div class="section" id="education">
+  <div class="container cc-education">
+    <div class="h1 text-center mb-4 title" style="color: #1771fc">Education</div>
+    {% for education in educations %}
+      <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500" style="background: #777777">
+          <div class="card-body cc-education-header">
+            <p style="color: white">{{ education.start }} - {{ education.end }}</p>
+            <div class="h5" style="color: white">{{ education.degree_title }}</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h3"  style="font: bold">{{ education.degree_name }}</div>
+            <p class="category">{{ education.university_name}}. </p>
+            <p>Duration:   {{ education.start }} To {{ education.end }}</p>
+              <p>CGPA / Marks:   {{ education.obtained_marks }} / {{ education.total_marks }}</p>
+              <p>PROJECT: {{ education.project }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+        <!--================Experience Area =================-->
+        <div class="section" id="experience">
+            <br/>
+  <div class="container cc-experience">
+    <div class="h1 text-center mb-4 title" style="color: #1771fc">Work Experience</div>
+    {% for experience in experiences %}
+      <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-experience-header">
+            <p style="color: white">{{ experience.start_date}} - {{ experience.end_date}}</p>
+            <div class="h5" style="color: white">{{ experience.institution}}</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h2">{{ experience.work_as}}</div>
+            <p>{{ experience.desc}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      {% endfor %}
+      <div class="section" id="certification">
+  <div class="container cc-education">
+      <br>
+    <div class="h1 text-center mb-4 title" style="color: #1771fc">Certification</div>
+    {% for certification in certifications %}
+      <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-education-header">
+            <p style="color: white">{{ certification.start_date}} - {{ certification.end_date}}</p>
+            <div class="h5" style="color: white">{{ certification.short_form}}</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h2">{{ certification.full_name}}</div>
+            <p class="category">{{ certification.desc }}</p>
+           </div>
+        </div>
+      </div>
+    </div>
+      {% endfor%}
+      </div>
+    </div>
+  </div>
+</div>
+        <!--================Projects Area =================-->
+        <section class="projects_area p_120" id="project">
+        	<div class="container">
+        		<div class="main_title">
+					<h1 align="center" style="color: #1771fc">Projects</h1>
+                    </div>
+				</div>
+				<div class="projects_inner row">
+                    {% for project in projects %}
+                    <div class="col-lg-4 col-sm-6 brand web">
+
+						<div class="projects_item">
+							<img class="img-fluid" src="/{{ 'media' }}/{{ project.p_image }}" alt=""  style="width: 60%" height="50%">
+							<div class="projects_text">
+								<a href="#"><h4>{{ project.p_name}}</h4></a>
+							</div>
+						</div>
+
+					</div>
+                    {% endfor %}
+				</div>
+        	</div>
+        </section>
+        <!--================End Projects Area =================-->
+        <!--================start contact =================-->
+        <section class="contact_area p_120" id="contact">
+            <div class="container">
+                {% for address in addresses %}
+                <h1 align="center" style="color: #1771fc">Contact Us</h1><br>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="contact_info">
+                            <div class="info_item">
+                                <h6><i class="lnr lnr-home"> </i>&nbsp<a href="#" style="color: blue">Address</a></h6>
+                                <p>{{ address.address}}</p>
+                            </div>
+                            <div class="info_item">
+                                <h6><i class="lnr lnr-phone-handset"></i> &nbsp <a href="#" style="color: blue">{{ address.phone }}</a></h6>
+                                <p>Mon to Sat 9am to 6 pm</p>
+                            </div>
+                            <div class="info_item">
+                                <h6><i class="lnr lnr-envelope"></i>&nbsp <a href="#" style="color: blue">{{ address.email}}</a></h6>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="col-lg-8">
+                        {{ mess }}
+                        <form class="row contact_form" action="" method="post" id="form" novalidate="novalidate">
+                            {% csrf_token %}
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" id="message" rows="6" placeholder="Enter Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================End contact =================-->
+        <!--================Footer Area =================-->
+        <footer class="footer_area p_120" style="width: 100%">
+        	<div class="container" style="background: #1771fc">
+        		<div class="row footer_inner">
+        			<div class="col-lg-5 col-sm-6">
+
+        			</div>
+        			<div class="col-lg-5 col-sm-6">
+                        <aside class="f_widget social_widget">
+        					<div class="f_title">
+        						<h3 style="color: white">Follow Me</h3>
+        					</div>
+        						<a href="https://www.facebook.com/zeeshanhayatshareef"><i class="fa fa-facebook" style="color: white"></i></a> &nbsp &nbsp
+        						<a href="https://twitter.com/zeexhan_hayat"><i class="fa fa-twitter" style="color: white"></i></a> &nbsp &nbsp
+        						<a href="https://www.instagram.com/zeeshan_hayat_shareef/"><i class="fa fa-instagram" style="color: white"></i></a> &nbsp &nbsp
+        						<a href="https://www.linkedin.com/in/zeeshan-hayat-541a4b118/"><i class="fa fa-linkedin" style="color: white"></i></a> &nbsp &nbsp
+        				</aside>
+        			</div>
+        			<div class="col-lg-2">
+
+        			</div>
+        		</div>
+        	</div>
+        </footer>
+        <!--================End Footer Area =================-->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+        <script src="{% static 'js/popper.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/stellar.js' %}"></script>
+        <script src="{% static 'vendors/lightbox/simpleLightbox.min.js' %}"></script>
+        <script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+        <script src="{% static 'vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'vendors/isotope/isotope-min.js' %}"></script>
+        <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'vendors/counter-up/jquery.waypoints.min.js' %}"></script>
+        <script src="{% static 'vendors/counter-up/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'js/mail-script.js' %}"></script>
+        <!--gmaps Js-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+        <script src="{% static 'js/gmaps.min.js' %}"></script>
+        <script src="{% static 'js/theme.js' %}"></script>
+        <script src="{% static 'js/jquery.form.js' %}"></script>
+        <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'js/contact.js' %}"></script>
+    </body>
+</html>
